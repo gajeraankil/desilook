@@ -1,5 +1,5 @@
 const TermsConditions = () => {
-  return <div>TermsConditions</div>;
+  return <></>;
 };
 
 export default TermsConditions;

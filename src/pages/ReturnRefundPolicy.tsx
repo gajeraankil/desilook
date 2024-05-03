@@ -1,5 +1,5 @@
 const ReturnRefundPolicy = () => {
-  return <div>ReturnRefundPolicy</div>;
+  return <></>;
 };
 
 export default ReturnRefundPolicy;

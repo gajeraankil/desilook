@@ -1,5 +1,5 @@
 const ShippingPolicy = () => {
-  return <div>ShippingPolicy</div>;
+  return <></>;
 };
 
 export default ShippingPolicy;
