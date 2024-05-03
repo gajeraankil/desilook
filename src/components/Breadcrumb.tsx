@@ -72,7 +72,7 @@ const Breadcrumb = () => {
               );
             })}
           </Breadcrumbs>
-          <h1 className="text-[30px] text-[#0F172A] font-extrabold leading-9 -tracking-wide m-0">
+          <h1 className="text-[30px] text-[#0F172A] font-bold leading-9 -tracking-wide m-0">
             {breadcrumbNameMap[`/${pathnames[pathnames.length - 1]}`]}
           </h1>
         </Container>
