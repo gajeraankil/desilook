@@ -32,20 +32,20 @@ const Breadcrumb = () => {
 
   return (
     <>
-      <section className="py-[40px] bg-[#F6F7F9]">
+      <section className="py-[40px] bg-[#02395A]">
         <Container>
           <Breadcrumbs
-            className="mb-[12px]"
+            className="mb-[10px]"
             aria-label="breadcrumb"
             separator={
-              <Typography className="text-[14px] text-[#64748B] font-semibold leading-5">
+              <Typography className="text-[14px] text-[white] font-medium leading-[1.7]">
                 /
               </Typography>
             }
             sx={{ "& ol": { justifyContent: "center" } }}
           >
             <LinkRouter
-              className="text-[14px] text-[#64748B] font-semibold no-underline leading-5"
+              className="text-[14px] text-[white] font-medium no-underline leading-[1.7]"
               to="/"
             >
               Home
@@ -56,14 +56,14 @@ const Breadcrumb = () => {
 
               return last ? (
                 <Typography
-                  className=" text-[#64748B] font-semibold leading-5"
+                  className="text-[14px] text-[white] font-medium leading-[1.7]"
                   key={to}
                 >
                   {breadcrumbNameMap[to]}
                 </Typography>
               ) : (
                 <LinkRouter
-                  className=" text-[#64748B] font-semibold no-underline leading-5"
+                  className="text-[14px] text-[white] font-medium no-underline leading-[1.7]"
                   to={to}
                   key={to}
                 >
@@ -74,7 +74,7 @@ const Breadcrumb = () => {
           </Breadcrumbs>
           <Typography
             variant="h1"
-            className="text-[30px] text-[#0F172A] text-center font-bold leading-9 -tracking-wide"
+            className="text-[30px] text-[white] text-center font-bold leading-tight tracking-[-0.2px]"
           >
             {breadcrumbNameMap[`/${pathnames[pathnames.length - 1]}`]}
           </Typography>
