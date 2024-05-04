@@ -1,4 +1,5 @@
 import {
+  Box,
   Breadcrumbs,
   Container,
   Link,
@@ -32,7 +33,7 @@ const Breadcrumb = () => {
 
   return (
     <>
-      <section className="py-[40px] bg-[#02395A]">
+      <Box component="section" className="py-[40px] bg-[#02395A]">
         <Container>
           <Breadcrumbs
             className="mb-[10px]"
@@ -79,7 +80,7 @@ const Breadcrumb = () => {
             {breadcrumbNameMap[`/${pathnames[pathnames.length - 1]}`]}
           </Typography>
         </Container>
-      </section>
+      </Box>
       <Outlet />
     </>
   );

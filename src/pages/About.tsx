@@ -1,8 +1,8 @@
-import { Container, Typography } from "@mui/material";
+import { Box, Container, Typography } from "@mui/material";
 
 const About = () => {
   return (
-    <section className="py-[40px]">
+    <Box component="section" className="py-[40px]">
       <Container>
         <Typography
           variant="h2"
@@ -43,7 +43,7 @@ const About = () => {
           Africa, New Zealand, Singapore, and many other countries.
         </Typography>
       </Container>
-    </section>
+    </Box>
   );
 };
 

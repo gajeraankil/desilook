@@ -3,9 +3,10 @@ import {
   Accordion,
   AccordionDetails,
   AccordionSummary,
+  Box,
   Container,
 } from "@mui/material";
-import { useState } from "react";
+import { SyntheticEvent, useState } from "react";
 
 const Faqs = () => {
   const data = [
@@ -123,12 +124,12 @@ const Faqs = () => {
   const [expanded, setExpanded] = useState<number | false>(false);
 
   const handleChange =
-    (panel: number) => (_: React.SyntheticEvent, newExpanded: boolean) => {
+    (panel: number) => (_: SyntheticEvent, newExpanded: boolean) => {
       setExpanded(newExpanded ? panel : false);
     };
 
   return (
-    <section className="py-[40px]">
+    <Box component="section" className="py-[40px]">
       <Container>
         {data?.map((faq, index) => (
           <Accordion
@@ -153,7 +154,7 @@ const Faqs = () => {
           </Accordion>
         ))}
       </Container>
-    </section>
+    </Box>
   );
 };
 
