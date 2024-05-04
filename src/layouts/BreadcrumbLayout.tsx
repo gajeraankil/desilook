@@ -32,16 +32,17 @@ const Breadcrumb = () => {
 
   return (
     <>
-      <div className="pt-[80px] pb-[40px]">
+      <section className="py-[40px] bg-[#F6F7F9]">
         <Container>
           <Breadcrumbs
+            className="mb-[12px]"
             aria-label="breadcrumb"
             separator={
-              <div className="text-[14px] text-[#64748B] font-semibold leading-5">
+              <Typography className="text-[14px] text-[#64748B] font-semibold leading-5">
                 /
-              </div>
+              </Typography>
             }
-            sx={{ "& ol": { marginBottom: "12px" } }}
+            sx={{ "& ol": { justifyContent: "center" } }}
           >
             <LinkRouter
               className="text-[14px] text-[#64748B] font-semibold no-underline leading-5"
@@ -55,15 +56,14 @@ const Breadcrumb = () => {
 
               return last ? (
                 <Typography
-                  className="text-[14px] text-[#64748B] font-semibold leading-5"
-                  color="text.primary"
+                  className=" text-[#64748B] font-semibold leading-5"
                   key={to}
                 >
                   {breadcrumbNameMap[to]}
                 </Typography>
               ) : (
                 <LinkRouter
-                  className="text-[14px] text-[#64748B] font-semibold no-underline leading-5"
+                  className=" text-[#64748B] font-semibold no-underline leading-5"
                   to={to}
                   key={to}
                 >
@@ -72,11 +72,14 @@ const Breadcrumb = () => {
               );
             })}
           </Breadcrumbs>
-          <h1 className="text-[30px] text-[#0F172A] font-bold leading-9 -tracking-wide m-0">
+          <Typography
+            variant="h1"
+            className="text-[30px] text-[#0F172A] text-center font-bold leading-9 -tracking-wide"
+          >
             {breadcrumbNameMap[`/${pathnames[pathnames.length - 1]}`]}
-          </h1>
+          </Typography>
         </Container>
-      </div>
+      </section>
       <Outlet />
     </>
   );

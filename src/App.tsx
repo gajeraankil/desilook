@@ -2,7 +2,8 @@ import { Suspense, lazy } from "react";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Loader from "./components/Loader";
 
-const Breadcrumb = lazy(() => import("./components/Breadcrumb"));
+const RootLayout = lazy(() => import("./layouts/RootLayout"));
+const BreadcrumbLayout = lazy(() => import("./layouts/BreadcrumbLayout"));
 const Home = lazy(() => import("./pages/Home"));
 const About = lazy(() => import("./pages/About"));
 const Contact = lazy(() => import("./pages/Contact"));
@@ -16,39 +17,45 @@ const App = () => {
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <Home />,
-    },
-    {
-      path: "/",
-      element: <Breadcrumb />,
+      element: <RootLayout />,
       children: [
         {
-          path: "about",
-          element: <About />,
+          path: "",
+          element: <Home />,
         },
         {
-          path: "contact",
-          element: <Contact />,
-        },
-        {
-          path: "faqs",
-          element: <Faqs />,
-        },
-        {
-          path: "privacy-policy",
-          element: <PrivacyPolicy />,
-        },
-        {
-          path: "return-refund-policy",
-          element: <ReturnRefundPolicy />,
-        },
-        {
-          path: "shipping-policy",
-          element: <ShippingPolicy />,
-        },
-        {
-          path: "terms-conditions",
-          element: <TermsConditions />,
+          path: "",
+          element: <BreadcrumbLayout />,
+          children: [
+            {
+              path: "about",
+              element: <About />,
+            },
+            {
+              path: "contact",
+              element: <Contact />,
+            },
+            {
+              path: "faqs",
+              element: <Faqs />,
+            },
+            {
+              path: "privacy-policy",
+              element: <PrivacyPolicy />,
+            },
+            {
+              path: "return-refund-policy",
+              element: <ReturnRefundPolicy />,
+            },
+            {
+              path: "shipping-policy",
+              element: <ShippingPolicy />,
+            },
+            {
+              path: "terms-conditions",
+              element: <TermsConditions />,
+            },
+          ],
         },
       ],
     },
