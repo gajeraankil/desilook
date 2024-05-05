@@ -10,9 +10,9 @@ import {
 import { Box, Container } from "@mui/material";
 import { Link } from "react-router-dom";
 
-const Header = () => {
+const Topbar = () => {
   return (
-    <Box component="header" className="py-[10px] bg-primary">
+    <Box className="py-[10px] bg-primary">
       <Container className="flex flex-wrap flex-col sm:flex-row justify-between items-center gap-[12px]">
         <Box className="flex flex-wrap flex-col sm:flex-row items-center text-[14px] gap-[12px]">
           <Link
@@ -20,7 +20,7 @@ const Header = () => {
             to="tel:+917600129081"
           >
             <Phone className="text-[16px] me-[5px]" />
-            <span>+917600129081</span>
+            <Box component="span">+917600129081</Box>
           </Link>
           <Link
             className="flex flex-wrap items-center text-[white] no-underline"
@@ -72,4 +72,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default Topbar;

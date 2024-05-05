@@ -14,8 +14,14 @@ const About = () => {
           Desilook Lifestyle is the new generation of online Indian ethnic wear
           stores. Desilook Lifestyle brings you the world's finest collection
           and wide range of Indian
-          <span className="text-primary"> SAREES, SALWAAR KAMEEZ,</span> and
-          <span className="text-primary"> LEHENGA CHOLI</span>.
+          <Box component="span" className="text-primary mx-1">
+            SAREES, SALWAAR KAMEEZ,
+          </Box>
+          and
+          <Box component="span" className="text-primary mx-1">
+            LEHENGA CHOLI
+          </Box>
+          .
         </Typography>
         <Typography className="text-[14px] text-[#60697B] text-justify leading-[1.7] font-medium mb-[20px]">
           We are one of the leading providers of online Indian traditional

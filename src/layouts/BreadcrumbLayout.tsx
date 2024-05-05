@@ -39,9 +39,9 @@ const Breadcrumb = () => {
             className="mb-[10px]"
             aria-label="breadcrumb"
             separator={
-              <Typography className="text-[14px] text-[white] font-medium leading-[1.7]">
+              <Box className="text-[14px] text-[white] font-medium leading-[1.7]">
                 /
-              </Typography>
+              </Box>
             }
             sx={{ "& ol": { justifyContent: "center" } }}
           >
