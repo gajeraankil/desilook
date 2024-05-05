@@ -32,35 +32,35 @@ const Topbar = () => {
         </Box>
         <Box className="leading-none">
           <Link
-            className="text-[white] me-[12px]"
+            className="inline-block text-[white] me-[12px]"
             to="https://www.facebook.com/Desilooklifestyle"
             target="_blank"
           >
             <Facebook className="text-[16px]" />
           </Link>
           <Link
-            className="text-[white] me-[12px]"
+            className="inline-block text-[white] me-[12px]"
             to="https://www.instagram.com/desilook_lifestyle"
             target="_blank"
           >
             <Instagram className="text-[16px]" />
           </Link>
           <Link
-            className="text-[white] me-[12px]"
+            className="inline-block text-[white] me-[12px]"
             to="https://www.linkedin.com/in/desilook-lifestyle-919656188"
             target="_blank"
           >
             <LinkedIn className="text-[16px]" />
           </Link>
           <Link
-            className="text-[white] me-[12px]"
+            className="inline-block text-[white] me-[12px]"
             to="https://ie.pinterest.com/desilookl"
             target="_blank"
           >
             <Pinterest className="text-[16px]" />
           </Link>
           <Link
-            className="text-[white]"
+            className="inline-block text-[white]"
             to="https://www.youtube.com/channel/UCdreHtKI9FObpNGPx71kxsg"
             target="_blank"
           >

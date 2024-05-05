@@ -9,7 +9,7 @@ const Navbar = () => {
         <Container className="flex flex-wrap justify-between items-center">
           <Link to="/">
             <Box
-              className="w-[50px] h-auto"
+              className="w-[50px] h-auto block"
               component="img"
               alt="Desilook"
               src={logo}
