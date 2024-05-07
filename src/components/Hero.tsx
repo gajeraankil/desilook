@@ -23,7 +23,7 @@ const Hero = () => {
     >
       <SwiperSlide>
         <Box
-          className="block w-screen h-auto"
+          className="block h-auto w-screen"
           component="img"
           alt="Desilook"
           src={carousel_1}
@@ -31,7 +31,7 @@ const Hero = () => {
       </SwiperSlide>
       <SwiperSlide>
         <Box
-          className="block w-screen h-auto"
+          className="block h-auto w-screen"
           component="img"
           alt="Desilook"
           src={carousel_2}
@@ -39,7 +39,7 @@ const Hero = () => {
       </SwiperSlide>
       <SwiperSlide>
         <Box
-          className="block w-screen h-auto"
+          className="block h-auto w-screen"
           component="img"
           alt="Desilook"
           src={carousel_3}
@@ -47,7 +47,7 @@ const Hero = () => {
       </SwiperSlide>
       <SwiperSlide>
         <Box
-          className="block w-screen h-auto"
+          className="block h-auto w-screen"
           component="img"
           alt="Desilook"
           src={carousel_4}

@@ -33,20 +33,20 @@ const Breadcrumb = () => {
 
   return (
     <>
-      <Box component="section" className="py-[40px] bg-[#02395A]">
+      <Box component="section" className="bg-[#02395A] py-[40px]">
         <Container>
           <Breadcrumbs
             className="mb-[10px]"
             aria-label="breadcrumb"
             separator={
-              <Box className="text-[14px] text-[white] font-medium leading-[1.7]">
+              <Box className="text-[14px] font-medium leading-[1.7] text-[white]">
                 /
               </Box>
             }
             sx={{ "& ol": { justifyContent: "center" } }}
           >
             <LinkRouter
-              className="text-[14px] text-[white] font-medium no-underline leading-[1.7]"
+              className="text-[14px] font-medium leading-[1.7] text-[white] no-underline"
               to="/"
             >
               Home
@@ -57,14 +57,14 @@ const Breadcrumb = () => {
 
               return last ? (
                 <Typography
-                  className="text-[14px] text-[white] font-medium leading-[1.7]"
+                  className="text-[14px] font-medium leading-[1.7] text-[white]"
                   key={to}
                 >
                   {breadcrumbNameMap[to]}
                 </Typography>
               ) : (
                 <LinkRouter
-                  className="text-[14px] text-[white] font-medium no-underline leading-[1.7]"
+                  className="text-[14px] font-medium leading-[1.7] text-[white] no-underline"
                   to={to}
                   key={to}
                 >
@@ -75,7 +75,7 @@ const Breadcrumb = () => {
           </Breadcrumbs>
           <Typography
             variant="h1"
-            className="text-[30px] text-[white] text-center font-bold leading-tight tracking-[-0.2px]"
+            className="text-center text-[30px] font-bold leading-tight tracking-[-0.2px] text-[white]"
           >
             {breadcrumbNameMap[`/${pathnames[pathnames.length - 1]}`]}
           </Typography>

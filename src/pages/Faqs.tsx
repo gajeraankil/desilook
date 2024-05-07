@@ -139,7 +139,7 @@ const Faqs = () => {
             className="text-[14px] font-bold"
           >
             <AccordionSummary
-              className={`text-[#1B1E23] tracking-[-0.01rem] leading-[1.45] hover:bg-[#E9EAEB] ${
+              className={`leading-[1.45] tracking-[-0.01rem] text-[#1B1E23] hover:bg-[#E9EAEB] ${
                 expanded === index ? "bg-[#e9eaeb]" : ""
               }`}
               expandIcon={<ExpandMore />}
@@ -148,7 +148,7 @@ const Faqs = () => {
             >
               {faq?.question}
             </AccordionSummary>
-            <AccordionDetails className="text-[#60697B] leading-[1.7]">
+            <AccordionDetails className="leading-[1.7] text-[#60697B]">
               {faq?.answer}
             </AccordionDetails>
           </Accordion>

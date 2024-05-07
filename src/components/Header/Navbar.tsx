@@ -5,11 +5,11 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
   return (
     <>
-      <AppBar className="static py-[10px] bg-[#F5F5F5]">
-        <Container className="flex flex-wrap justify-between items-center">
+      <AppBar className="static bg-[#F5F5F5] py-[10px]">
+        <Container className="flex flex-wrap items-center justify-between">
           <Link to="/">
             <Box
-              className="w-[50px] h-auto block"
+              className="block h-auto w-[50px]"
               component="img"
               alt="Desilook"
               src={logo}
