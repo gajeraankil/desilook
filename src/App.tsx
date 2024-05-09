@@ -6,6 +6,7 @@ const RootLayout = lazy(() => import("./layouts/RootLayout"));
 const BreadcrumbLayout = lazy(() => import("./layouts/BreadcrumbLayout"));
 const Home = lazy(() => import("./pages/Home"));
 const About = lazy(() => import("./pages/About"));
+const Category = lazy(() => import("./pages/Category"));
 const Contact = lazy(() => import("./pages/Contact"));
 const Faqs = lazy(() => import("./pages/Faqs"));
 const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
@@ -27,6 +28,14 @@ const App = () => {
           path: "",
           element: <BreadcrumbLayout />,
           children: [
+            {
+              path: "category",
+              element: <Category />,
+            },
+            {
+              path: "category/:category",
+              element: <Category />,
+            },
             {
               path: "about",
               element: <About />,

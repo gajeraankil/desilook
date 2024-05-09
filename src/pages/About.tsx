@@ -18,7 +18,7 @@ const About = () => {
             SAREES, SALWAAR KAMEEZ,
           </Box>
           and
-          <Box component="span" className="mx-1 text-primary">
+          <Box component="span" className="ms-1 text-primary">
             LEHENGA CHOLI
           </Box>
           .

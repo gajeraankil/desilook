@@ -12,7 +12,7 @@ import { NavLink } from "react-router-dom";
 const Footer = () => {
   return (
     <Box component="footer" className="text-[white]">
-      <Box className="py-[50px] bg-[#212529]">
+      <Box className="bg-[#212529] py-[50px]">
         <Container>
           <Grid container>
             <Grid
@@ -20,63 +20,63 @@ const Footer = () => {
               xs={12}
               sm={6}
               lg={3}
-              className="pe-[30px] mb-[30px] lg:mb-0"
+              className="mb-[30px] pe-[30px] lg:mb-0"
             >
               <Typography
                 variant="h4"
-                className="relative text-[19px] pb-[4px] mb-[20px] font-medium leading-[1.45] tracking-[-0.2px]"
+                className="relative mb-[20px] pb-[4px] text-[19px] font-medium leading-[1.45] tracking-[-0.2px]"
               >
                 <Box
                   component="span"
-                  className="absolute left-0 bottom-[-4px] w-[40px] h-[1px] bg-[#737576]"
+                  className="absolute bottom-[-4px] left-0 h-[1px] w-[40px] bg-[#737576]"
                 ></Box>
                 CONTACT US
                 <Box
                   component="span"
-                  className="absolute left-0 bottom-[-4px] w-[12px] h-[2px] bg-[white] rounded-[10px]"
+                  className="absolute bottom-[-4px] left-0 h-[2px] w-[12px] rounded-[10px] bg-[white]"
                 ></Box>
               </Typography>
               <List className="p-0 text-[14px] leading-[1.7]">
-                <ListItem className="px-0 pt-0 pb-[6px]">
+                <ListItem className="px-0 pb-[6px] pt-0">
                   <NavLink
-                    to=""
-                    className="flex items-center text-[white] no-underline hover:opacity-[0.8] transition-all duration-[0.2s] ease-[ease-in-out]"
+                    to="#"
+                    className="flex items-center text-[white] no-underline transition-all duration-[0.2s] ease-[ease-in-out] hover:opacity-[0.8]"
                   >
-                    <LocationOn className="text-[14px] me-[10px]" />
+                    <LocationOn className="me-[10px] text-[14px]" />
                     <Box component="span" className="font-light">
                       1053-54 Avadh Textile Market Opp. New Bombay Market surat
                       - 395010
                     </Box>
                   </NavLink>
                 </ListItem>
-                <ListItem className="px-0 pt-0 pb-[6px]">
+                <ListItem className="px-0 pb-[6px] pt-0">
                   <NavLink
                     to="mailto:desilooklifestyle.com@gmail.com"
-                    className="flex items-center text-[white] no-underline hover:opacity-[0.8] transition-all duration-[0.2s] ease-[ease-in-out]"
+                    className="flex items-center text-[white] no-underline transition-all duration-[0.2s] ease-[ease-in-out] hover:opacity-[0.8]"
                   >
-                    <Mail className="text-[14px] me-[10px]" />
+                    <Mail className="me-[10px] text-[14px]" />
                     <Box component="span" className="font-light">
                       desilooklifestyle.com@gmail.com
                     </Box>
                   </NavLink>
                 </ListItem>
-                <ListItem className="px-0 pt-0 pb-[6px]">
+                <ListItem className="px-0 pb-[6px] pt-0">
                   <NavLink
                     to="tel:+917600129081"
-                    className="flex items-center text-[white] no-underline hover:opacity-[0.8] transition-all duration-[0.2s] ease-[ease-in-out]"
+                    className="flex items-center text-[white] no-underline transition-all duration-[0.2s] ease-[ease-in-out] hover:opacity-[0.8]"
                   >
-                    <Phone className="text-[14px] me-[10px]" />
+                    <Phone className="me-[10px] text-[14px]" />
                     <Box component="span" className="font-light">
                       +91 76001 29081
                     </Box>
                   </NavLink>
                 </ListItem>
-                <ListItem className="px-0 pt-0 pb-[6px]">
+                <ListItem className="px-0 pb-[6px] pt-0">
                   <NavLink
                     to="tel:+917285863014"
-                    className="flex items-center text-[white] no-underline hover:opacity-[0.8] transition-all duration-[0.2s] ease-[ease-in-out]"
+                    className="flex items-center text-[white] no-underline transition-all duration-[0.2s] ease-[ease-in-out] hover:opacity-[0.8]"
                   >
-                    <Phone className="text-[14px] me-[10px]" />
+                    <Phone className="me-[10px] text-[14px]" />
                     <Box component="span" className="font-light">
                       +91 72858 63014
                     </Box>
@@ -89,95 +89,95 @@ const Footer = () => {
               xs={12}
               sm={6}
               lg={3}
-              className="pe-[30px] mb-[30px] lg:mb-0"
+              className="mb-[30px] pe-[30px] lg:mb-0"
             >
               <Typography
                 variant="h4"
-                className="relative text-[19px] pb-[4px] mb-[20px] font-medium leading-[1.45] tracking-[-0.2px]"
+                className="relative mb-[20px] pb-[4px] text-[19px] font-medium leading-[1.45] tracking-[-0.2px]"
               >
                 <Box
                   component="span"
-                  className="absolute left-0 bottom-[-4px] w-[40px] h-[1px] bg-[#737576]"
+                  className="absolute bottom-[-4px] left-0 h-[1px] w-[40px] bg-[#737576]"
                 ></Box>
                 Categories
                 <Box
                   component="span"
-                  className="absolute left-0 bottom-[-4px] w-[12px] h-[2px] bg-[white] rounded-[10px]"
+                  className="absolute bottom-[-4px] left-0 h-[2px] w-[12px] rounded-[10px] bg-[white]"
                 ></Box>
               </Typography>
               <List className="p-0 text-[14px] leading-[1.7]">
-                <ListItem className="px-0 pt-0 pb-[6px]">
+                <ListItem className="px-0 pb-[6px] pt-0">
                   <NavLink
-                    to=""
-                    className="flex items-center text-[white] no-underline hover:opacity-[0.8] transition-all duration-[0.2s] ease-[ease-in-out]"
+                    to="#"
+                    className="flex items-center text-[white] no-underline transition-all duration-[0.2s] ease-[ease-in-out] hover:opacity-[0.8]"
                   >
-                    <ArrowRight className="text-[14px] text-primary me-[10px]" />
+                    <ArrowRight className="me-[10px] text-[14px] text-primary" />
                     <Box component="span" className="font-light">
                       Lehenga Choli
                     </Box>
                   </NavLink>
                 </ListItem>
-                <ListItem className="px-0 pt-0 pb-[6px]">
+                <ListItem className="px-0 pb-[6px] pt-0">
                   <NavLink
-                    to=""
-                    className="flex items-center text-[white] no-underline hover:opacity-[0.8] transition-all duration-[0.2s] ease-[ease-in-out]"
+                    to="#"
+                    className="flex items-center text-[white] no-underline transition-all duration-[0.2s] ease-[ease-in-out] hover:opacity-[0.8]"
                   >
-                    <ArrowRight className="text-[14px] text-primary me-[10px]" />
+                    <ArrowRight className="me-[10px] text-[14px] text-primary" />
                     <Box component="span" className="font-light">
                       Saree
                     </Box>
                   </NavLink>
                 </ListItem>
-                <ListItem className="px-0 pt-0 pb-[6px]">
+                <ListItem className="px-0 pb-[6px] pt-0">
                   <NavLink
-                    to=""
-                    className="flex items-center text-[white] no-underline hover:opacity-[0.8] transition-all duration-[0.2s] ease-[ease-in-out]"
+                    to="#"
+                    className="flex items-center text-[white] no-underline transition-all duration-[0.2s] ease-[ease-in-out] hover:opacity-[0.8]"
                   >
-                    <ArrowRight className="text-[14px] text-primary me-[10px]" />
+                    <ArrowRight className="me-[10px] text-[14px] text-primary" />
                     <Box component="span" className="font-light">
                       Kurti
                     </Box>
                   </NavLink>
                 </ListItem>
-                <ListItem className="px-0 pt-0 pb-[6px]">
+                <ListItem className="px-0 pb-[6px] pt-0">
                   <NavLink
-                    to=""
-                    className="flex items-center text-[white] no-underline hover:opacity-[0.8] transition-all duration-[0.2s] ease-[ease-in-out]"
+                    to="#"
+                    className="flex items-center text-[white] no-underline transition-all duration-[0.2s] ease-[ease-in-out] hover:opacity-[0.8]"
                   >
-                    <ArrowRight className="text-[14px] text-primary me-[10px]" />
+                    <ArrowRight className="me-[10px] text-[14px] text-primary" />
                     <Box component="span" className="font-light">
                       Salwar Suit
                     </Box>
                   </NavLink>
                 </ListItem>
-                <ListItem className="px-0 pt-0 pb-[6px]">
+                <ListItem className="px-0 pb-[6px] pt-0">
                   <NavLink
-                    to=""
-                    className="flex items-center text-[white] no-underline hover:opacity-[0.8] transition-all duration-[0.2s] ease-[ease-in-out]"
+                    to="#"
+                    className="flex items-center text-[white] no-underline transition-all duration-[0.2s] ease-[ease-in-out] hover:opacity-[0.8]"
                   >
-                    <ArrowRight className="text-[14px] text-primary me-[10px]" />
+                    <ArrowRight className="me-[10px] text-[14px] text-primary" />
                     <Box component="span" className="font-light">
                       Gown
                     </Box>
                   </NavLink>
                 </ListItem>
-                <ListItem className="px-0 pt-0 pb-[6px]">
+                <ListItem className="px-0 pb-[6px] pt-0">
                   <NavLink
-                    to=""
-                    className="flex items-center text-[white] no-underline hover:opacity-[0.8] transition-all duration-[0.2s] ease-[ease-in-out]"
+                    to="#"
+                    className="flex items-center text-[white] no-underline transition-all duration-[0.2s] ease-[ease-in-out] hover:opacity-[0.8]"
                   >
-                    <ArrowRight className="text-[14px] text-primary me-[10px]" />
+                    <ArrowRight className="me-[10px] text-[14px] text-primary" />
                     <Box component="span" className="font-light">
                       Dupatta
                     </Box>
                   </NavLink>
                 </ListItem>
-                <ListItem className="px-0 pt-0 pb-[6px]">
+                <ListItem className="px-0 pb-[6px] pt-0">
                   <NavLink
-                    to=""
-                    className="flex items-center text-[white] no-underline hover:opacity-[0.8] transition-all duration-[0.2s] ease-[ease-in-out]"
+                    to="#"
+                    className="flex items-center text-[white] no-underline transition-all duration-[0.2s] ease-[ease-in-out] hover:opacity-[0.8]"
                   >
-                    <ArrowRight className="text-[14px] text-primary me-[10px]" />
+                    <ArrowRight className="me-[10px] text-[14px] text-primary" />
                     <Box component="span" className="font-light">
                       Potali Bags
                     </Box>
@@ -190,95 +190,95 @@ const Footer = () => {
               xs={12}
               sm={6}
               lg={3}
-              className="pe-[30px] mb-[30px] lg:mb-0"
+              className="mb-[30px] pe-[30px] lg:mb-0"
             >
               <Typography
                 variant="h4"
-                className="relative text-[19px] pb-[4px] mb-[20px] font-medium leading-[1.45] tracking-[-0.2px]"
+                className="relative mb-[20px] pb-[4px] text-[19px] font-medium leading-[1.45] tracking-[-0.2px]"
               >
                 <Box
                   component="span"
-                  className="absolute left-0 bottom-[-4px] w-[40px] h-[1px] bg-[#737576]"
+                  className="absolute bottom-[-4px] left-0 h-[1px] w-[40px] bg-[#737576]"
                 ></Box>
                 Infomation
                 <Box
                   component="span"
-                  className="absolute left-0 bottom-[-4px] w-[12px] h-[2px] bg-[white] rounded-[10px]"
+                  className="absolute bottom-[-4px] left-0 h-[2px] w-[12px] rounded-[10px] bg-[white]"
                 ></Box>
               </Typography>
               <List className="p-0 text-[14px] leading-[1.7]">
-                <ListItem className="px-0 pt-0 pb-[6px]">
+                <ListItem className="px-0 pb-[6px] pt-0">
                   <NavLink
                     to="/about"
-                    className="flex items-center text-[white] no-underline hover:opacity-[0.8] transition-all duration-[0.2s] ease-[ease-in-out]"
+                    className="flex items-center text-[white] no-underline transition-all duration-[0.2s] ease-[ease-in-out] hover:opacity-[0.8]"
                   >
-                    <ArrowRight className="text-[14px] text-primary me-[10px]" />
+                    <ArrowRight className="me-[10px] text-[14px] text-primary" />
                     <Box component="span" className="font-light">
                       About Us
                     </Box>
                   </NavLink>
                 </ListItem>
-                <ListItem className="px-0 pt-0 pb-[6px]">
+                <ListItem className="px-0 pb-[6px] pt-0">
                   <NavLink
                     to="/privacy-policy"
-                    className="flex items-center text-[white] no-underline hover:opacity-[0.8] transition-all duration-[0.2s] ease-[ease-in-out]"
+                    className="flex items-center text-[white] no-underline transition-all duration-[0.2s] ease-[ease-in-out] hover:opacity-[0.8]"
                   >
-                    <ArrowRight className="text-[14px] text-primary me-[10px]" />
+                    <ArrowRight className="me-[10px] text-[14px] text-primary" />
                     <Box component="span" className="font-light">
                       Privacy Policy
                     </Box>
                   </NavLink>
                 </ListItem>
-                <ListItem className="px-0 pt-0 pb-[6px]">
+                <ListItem className="px-0 pb-[6px] pt-0">
                   <NavLink
                     to="/shipping-policy"
-                    className="flex items-center text-[white] no-underline hover:opacity-[0.8] transition-all duration-[0.2s] ease-[ease-in-out]"
+                    className="flex items-center text-[white] no-underline transition-all duration-[0.2s] ease-[ease-in-out] hover:opacity-[0.8]"
                   >
-                    <ArrowRight className="text-[14px] text-primary me-[10px]" />
+                    <ArrowRight className="me-[10px] text-[14px] text-primary" />
                     <Box component="span" className="font-light">
                       Shipping Policy
                     </Box>
                   </NavLink>
                 </ListItem>
-                <ListItem className="px-0 pt-0 pb-[6px]">
+                <ListItem className="px-0 pb-[6px] pt-0">
                   <NavLink
                     to="/return-refund-policy"
-                    className="flex items-center text-[white] no-underline hover:opacity-[0.8] transition-all duration-[0.2s] ease-[ease-in-out]"
+                    className="flex items-center text-[white] no-underline transition-all duration-[0.2s] ease-[ease-in-out] hover:opacity-[0.8]"
                   >
-                    <ArrowRight className="text-[14px] text-primary me-[10px]" />
+                    <ArrowRight className="me-[10px] text-[14px] text-primary" />
                     <Box component="span" className="font-light">
                       Return & Refund Policy
                     </Box>
                   </NavLink>
                 </ListItem>
-                <ListItem className="px-0 pt-0 pb-[6px]">
+                <ListItem className="px-0 pb-[6px] pt-0">
                   <NavLink
                     to="/terms-conditions"
-                    className="flex items-center text-[white] no-underline hover:opacity-[0.8] transition-all duration-[0.2s] ease-[ease-in-out]"
+                    className="flex items-center text-[white] no-underline transition-all duration-[0.2s] ease-[ease-in-out] hover:opacity-[0.8]"
                   >
-                    <ArrowRight className="text-[14px] text-primary me-[10px]" />
+                    <ArrowRight className="me-[10px] text-[14px] text-primary" />
                     <Box component="span" className="font-light">
                       Terms & Conditions
                     </Box>
                   </NavLink>
                 </ListItem>
-                <ListItem className="px-0 pt-0 pb-[6px]">
+                <ListItem className="px-0 pb-[6px] pt-0">
                   <NavLink
                     to="/faqs"
-                    className="flex items-center text-[white] no-underline hover:opacity-[0.8] transition-all duration-[0.2s] ease-[ease-in-out]"
+                    className="flex items-center text-[white] no-underline transition-all duration-[0.2s] ease-[ease-in-out] hover:opacity-[0.8]"
                   >
-                    <ArrowRight className="text-[14px] text-primary me-[10px]" />
+                    <ArrowRight className="me-[10px] text-[14px] text-primary" />
                     <Box component="span" className="font-light">
                       FAQs
                     </Box>
                   </NavLink>
                 </ListItem>
-                <ListItem className="px-0 pt-0 pb-[6px]">
+                <ListItem className="px-0 pb-[6px] pt-0">
                   <NavLink
                     to="/contact"
-                    className="flex items-center text-[white] no-underline hover:opacity-[0.8] transition-all duration-[0.2s] ease-[ease-in-out]"
+                    className="flex items-center text-[white] no-underline transition-all duration-[0.2s] ease-[ease-in-out] hover:opacity-[0.8]"
                   >
-                    <ArrowRight className="text-[14px] text-primary me-[10px]" />
+                    <ArrowRight className="me-[10px] text-[14px] text-primary" />
                     <Box component="span" className="font-light">
                       Contact Us
                     </Box>
@@ -290,7 +290,7 @@ const Footer = () => {
           </Grid>
         </Container>
       </Box>
-      <Box className="py-[20px] bg-[#262B32]">
+      <Box className="bg-[#262B32] py-[20px]">
         <Container>
           <Typography className="text-[14px] font-medium leading-[1.7]">
             © Copyright {new Date().getFullYear()}. Desilook Lifestyle. All
