@@ -71,11 +71,11 @@ const Navbar = () => {
 
   return (
     <>
-      <AppBar className="static bg-[#F5F5F5] py-[10px]">
+      <AppBar className="static bg-[#F5F5F5] py-2.5">
         <Container className="flex flex-wrap items-center justify-between">
           <Box className="flex flex-wrap items-center">
             <IconButton
-              className="me-[16px] block h-[40px] md:hidden"
+              className="me-4 block h-10 md:hidden"
               onClick={toggleDrawer(true)}
             >
               <Menu />
@@ -91,10 +91,10 @@ const Navbar = () => {
           </Box>
           <List className="hidden flex-wrap md:flex">{DrawerList}</List>
           <Box>
-            <IconButton className="me-[12px]">
+            <IconButton className="me-3">
               <PersonOutline />
             </IconButton>
-            <IconButton className="me-[12px]">
+            <IconButton className="me-3">
               <Badge
                 variant="dot"
                 sx={{

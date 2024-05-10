@@ -25,20 +25,20 @@ const BreadcrumbLayout = () => {
 
   return (
     <>
-      <Box component="section" className="bg-[#02395A] py-[40px]">
+      <Box component="section" className="bg-[#02395A] py-10">
         <Container>
           <Breadcrumbs
-            className="mb-[10px]"
+            className="mb-2.5"
             aria-label="breadcrumb"
             separator={
-              <Box className="text-[14px] font-medium leading-[1.7] text-[white]">
+              <Box className="text-sm font-medium leading-[1.7] text-[white]">
                 /
               </Box>
             }
             sx={{ "& ol": { justifyContent: "center" } }}
           >
             <LinkRouter
-              className="text-[14px] font-medium leading-[1.7] text-[white] no-underline"
+              className="text-sm font-medium leading-[1.7] text-[white] no-underline"
               to="/"
             >
               Home
@@ -49,14 +49,14 @@ const BreadcrumbLayout = () => {
 
               return last ? (
                 <Typography
-                  className="text-[14px] font-medium capitalize leading-[1.7] text-[white]"
+                  className="text-sm font-medium capitalize leading-[1.7] text-[white]"
                   key={to}
                 >
                   {pathname.replace(/-/g, " ")}
                 </Typography>
               ) : (
                 <LinkRouter
-                  className="text-[14px] font-medium capitalize leading-[1.7] text-[white] no-underline"
+                  className="text-sm font-medium capitalize leading-[1.7] text-[white] no-underline"
                   to={to}
                   key={to}
                 >
@@ -67,7 +67,7 @@ const BreadcrumbLayout = () => {
           </Breadcrumbs>
           <Typography
             variant="h1"
-            className="text-center text-[30px] font-bold capitalize leading-tight tracking-[-0.2px] text-[white]"
+            className="text-center text-3xl font-bold capitalize leading-tight tracking-[-0.2px] text-[white]"
           >
             {pathnames[pathnames.length - 1].replace(/-/g, " ")}
           </Typography>

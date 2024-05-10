@@ -129,14 +129,14 @@ const Faqs = () => {
     };
 
   return (
-    <Box component="section" className="py-[40px]">
+    <Box component="section" className="py-10">
       <Container>
         {data?.map((faq, index) => (
           <Accordion
             key={index}
             expanded={expanded === index}
             onChange={handleChange(index)}
-            className="text-[14px] font-bold"
+            className="text-sm font-bold"
           >
             <AccordionSummary
               className={`leading-[1.45] tracking-[-0.01rem] text-[#1B1E23] hover:bg-[#E9EAEB] ${

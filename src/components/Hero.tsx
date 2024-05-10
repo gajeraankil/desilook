@@ -14,45 +14,47 @@ const Hero = () => {
   const swiperRef = useRef<any>(null);
 
   return (
-    <Swiper
-      onSwiper={(swiper) => {
-        swiperRef.current = swiper;
-      }}
-      modules={[A11y, Autoplay, Navigation]}
-      slidesPerView={1}
-      navigation={false}
-      scrollbar={{ draggable: true }}
-      loop
-      autoplay={{
-        delay: 3000,
-        disableOnInteraction: false,
-      }}
-    >
-      {[carousel_1, carousel_2, carousel_3, carousel_4]?.map(
-        (carousel, index) => (
-          <SwiperSlide key={index}>
-            <Box
-              className="block h-auto w-screen"
-              component="img"
-              alt="Desilook"
-              src={carousel}
-            />
-          </SwiperSlide>
-        ),
-      )}
-      <IconButton
-        className="absolute left-[10px] top-2/4 z-[1] -translate-y-2/4 bg-[#ffffffb3] text-[#343f52]"
-        onClick={() => swiperRef.current.slidePrev()}
+    <Box component="section">
+      <Swiper
+        onSwiper={(swiper) => {
+          swiperRef.current = swiper;
+        }}
+        modules={[A11y, Autoplay, Navigation]}
+        slidesPerView={1}
+        navigation={false}
+        scrollbar={{ draggable: true }}
+        loop
+        autoplay={{
+          delay: 3000,
+          disableOnInteraction: false,
+        }}
       >
-        <ArrowBack />
-      </IconButton>
-      <IconButton
-        className="absolute right-[10px] top-2/4 z-[1] -translate-y-2/4 bg-[#ffffffb3] text-[#343f52]"
-        onClick={() => swiperRef.current.slideNext()}
-      >
-        <ArrowForward />
-      </IconButton>
-    </Swiper>
+        {[carousel_1, carousel_2, carousel_3, carousel_4]?.map(
+          (carousel, index) => (
+            <SwiperSlide key={index}>
+              <Box
+                className="block h-auto w-screen"
+                component="img"
+                alt="Desilook"
+                src={carousel}
+              />
+            </SwiperSlide>
+          ),
+        )}
+        <IconButton
+          className="absolute left-2.5 top-2/4 z-[1] -translate-y-2/4 bg-[#ffffffb3] text-[#343f52]"
+          onClick={() => swiperRef.current.slidePrev()}
+        >
+          <ArrowBack />
+        </IconButton>
+        <IconButton
+          className="absolute right-2.5 top-2/4 z-[1] -translate-y-2/4 bg-[#ffffffb3] text-[#343f52]"
+          onClick={() => swiperRef.current.slideNext()}
+        >
+          <ArrowForward />
+        </IconButton>
+      </Swiper>
+    </Box>
   );
 };
 
