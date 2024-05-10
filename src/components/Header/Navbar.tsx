@@ -22,7 +22,7 @@ import logo from "../../assets/logo.png";
 const Navbar = () => {
   const [open, setOpen] = useState(false);
 
-  const navMenu = [
+  const categories = [
     "Lehenga Choli",
     "Saree",
     "Kurti",
@@ -36,9 +36,9 @@ const Navbar = () => {
     setOpen(newOpen);
   };
 
-  const DrawerList = navMenu?.map((item) => (
+  const DrawerList = categories?.map((category) => (
     <ListItem
-      key={item}
+      key={category}
       sx={{
         width: "auto",
         padding: {
@@ -51,7 +51,7 @@ const Navbar = () => {
         letterSpacing: -0.5,
       }}
     >
-      <ListItemButton sx={{ padding: 0 }}>
+      <ListItemButton sx={{ padding: 0 }} tabIndex={-1}>
         <NavLink
           style={({ isActive }) => {
             return {
@@ -61,9 +61,9 @@ const Navbar = () => {
               width: "100%",
             };
           }}
-          to={`/category/${item.toLowerCase().replace(/ /g, "-")}`}
+          to={`/category/${category.toLowerCase().replace(/ /g, "-")}`}
         >
-          {item}
+          {category}
         </NavLink>
       </ListItemButton>
     </ListItem>

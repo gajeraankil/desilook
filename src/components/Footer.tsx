@@ -10,6 +10,16 @@ import {
 import { NavLink } from "react-router-dom";
 
 const Footer = () => {
+  const categories = [
+    "Lehenga Choli",
+    "Saree",
+    "Kurti",
+    "Salwar Suit",
+    "Gown",
+    "Dupatta",
+    "Potali Bags",
+  ];
+
   return (
     <Box component="footer" className="text-[white]">
       <Box className="bg-[#212529] py-[50px]">
@@ -106,83 +116,19 @@ const Footer = () => {
                 ></Box>
               </Typography>
               <List className="p-0 text-[14px] leading-[1.7]">
-                <ListItem className="px-0 pb-[6px] pt-0">
-                  <NavLink
-                    to="#"
-                    className="flex items-center text-[white] no-underline transition-all duration-[0.2s] ease-[ease-in-out] hover:opacity-[0.8]"
-                  >
-                    <ArrowRight className="me-[10px] text-[14px] text-primary" />
-                    <Box component="span" className="font-light">
-                      Lehenga Choli
-                    </Box>
-                  </NavLink>
-                </ListItem>
-                <ListItem className="px-0 pb-[6px] pt-0">
-                  <NavLink
-                    to="#"
-                    className="flex items-center text-[white] no-underline transition-all duration-[0.2s] ease-[ease-in-out] hover:opacity-[0.8]"
-                  >
-                    <ArrowRight className="me-[10px] text-[14px] text-primary" />
-                    <Box component="span" className="font-light">
-                      Saree
-                    </Box>
-                  </NavLink>
-                </ListItem>
-                <ListItem className="px-0 pb-[6px] pt-0">
-                  <NavLink
-                    to="#"
-                    className="flex items-center text-[white] no-underline transition-all duration-[0.2s] ease-[ease-in-out] hover:opacity-[0.8]"
-                  >
-                    <ArrowRight className="me-[10px] text-[14px] text-primary" />
-                    <Box component="span" className="font-light">
-                      Kurti
-                    </Box>
-                  </NavLink>
-                </ListItem>
-                <ListItem className="px-0 pb-[6px] pt-0">
-                  <NavLink
-                    to="#"
-                    className="flex items-center text-[white] no-underline transition-all duration-[0.2s] ease-[ease-in-out] hover:opacity-[0.8]"
-                  >
-                    <ArrowRight className="me-[10px] text-[14px] text-primary" />
-                    <Box component="span" className="font-light">
-                      Salwar Suit
-                    </Box>
-                  </NavLink>
-                </ListItem>
-                <ListItem className="px-0 pb-[6px] pt-0">
-                  <NavLink
-                    to="#"
-                    className="flex items-center text-[white] no-underline transition-all duration-[0.2s] ease-[ease-in-out] hover:opacity-[0.8]"
-                  >
-                    <ArrowRight className="me-[10px] text-[14px] text-primary" />
-                    <Box component="span" className="font-light">
-                      Gown
-                    </Box>
-                  </NavLink>
-                </ListItem>
-                <ListItem className="px-0 pb-[6px] pt-0">
-                  <NavLink
-                    to="#"
-                    className="flex items-center text-[white] no-underline transition-all duration-[0.2s] ease-[ease-in-out] hover:opacity-[0.8]"
-                  >
-                    <ArrowRight className="me-[10px] text-[14px] text-primary" />
-                    <Box component="span" className="font-light">
-                      Dupatta
-                    </Box>
-                  </NavLink>
-                </ListItem>
-                <ListItem className="px-0 pb-[6px] pt-0">
-                  <NavLink
-                    to="#"
-                    className="flex items-center text-[white] no-underline transition-all duration-[0.2s] ease-[ease-in-out] hover:opacity-[0.8]"
-                  >
-                    <ArrowRight className="me-[10px] text-[14px] text-primary" />
-                    <Box component="span" className="font-light">
-                      Potali Bags
-                    </Box>
-                  </NavLink>
-                </ListItem>
+                {categories?.map((category) => (
+                  <ListItem className="px-0 pb-[6px] pt-0" key={category}>
+                    <NavLink
+                      to={`/category/${category.toLowerCase().replace(/ /g, "-")}`}
+                      className="flex items-center text-[white] no-underline transition-all duration-[0.2s] ease-[ease-in-out] hover:opacity-[0.8]"
+                    >
+                      <ArrowRight className="me-[10px] text-[14px] text-primary" />
+                      <Box component="span" className="font-light">
+                        {category}
+                      </Box>
+                    </NavLink>
+                  </ListItem>
+                ))}
               </List>
             </Grid>
             <Grid

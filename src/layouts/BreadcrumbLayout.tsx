@@ -13,9 +13,11 @@ interface LinkRouterProps extends LinkProps {
   replace?: boolean;
 }
 
-const Breadcrumb = () => {
+const BreadcrumbLayout = () => {
   const location = useLocation();
-  const pathnames = location.pathname.split("/").filter((x) => x);
+  const pathnames = location.pathname
+    .split("/")
+    .filter((x) => x && x !== "category");
 
   const LinkRouter = (props: LinkRouterProps) => {
     return <Link {...props} component={RouterLink as any} />;
@@ -76,4 +78,4 @@ const Breadcrumb = () => {
   );
 };
 
-export default Breadcrumb;
+export default BreadcrumbLayout;

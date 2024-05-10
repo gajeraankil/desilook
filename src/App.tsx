@@ -29,16 +29,12 @@ const App = () => {
           element: <BreadcrumbLayout />,
           children: [
             {
-              path: "category",
-              element: <Category />,
+              path: "about",
+              element: <About />,
             },
             {
               path: "category/:category",
               element: <Category />,
-            },
-            {
-              path: "about",
-              element: <About />,
             },
             {
               path: "contact",
