@@ -49,7 +49,7 @@ const App = () => {
               element: <PrivacyPolicy />,
             },
             {
-              path: "return-refund-policy",
+              path: "return-and-refund-policy",
               element: <ReturnRefundPolicy />,
             },
             {
@@ -57,7 +57,7 @@ const App = () => {
               element: <ShippingPolicy />,
             },
             {
-              path: "terms-conditions",
+              path: "terms-and-conditions",
               element: <TermsConditions />,
             },
           ],

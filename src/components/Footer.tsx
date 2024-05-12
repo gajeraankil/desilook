@@ -142,7 +142,7 @@ const Footer = () => {
                   >
                     <ArrowRight className="me-2.5 text-sm text-primary" />
                     <Box component="span" className="font-light">
-                      About Us
+                      About
                     </Box>
                   </NavLink>
                 </ListItem>
@@ -170,7 +170,7 @@ const Footer = () => {
                 </ListItem>
                 <ListItem className="px-0 pb-1.5 pt-0">
                   <NavLink
-                    to="/return-refund-policy"
+                    to="/return-and-refund-policy"
                     className="flex items-center text-[white] no-underline transition-all duration-[0.2s] ease-[ease-in-out] hover:opacity-[0.8]"
                   >
                     <ArrowRight className="me-2.5 text-sm text-primary" />
@@ -181,7 +181,7 @@ const Footer = () => {
                 </ListItem>
                 <ListItem className="px-0 pb-1.5 pt-0">
                   <NavLink
-                    to="/terms-conditions"
+                    to="/terms-and-conditions"
                     className="flex items-center text-[white] no-underline transition-all duration-[0.2s] ease-[ease-in-out] hover:opacity-[0.8]"
                   >
                     <ArrowRight className="me-2.5 text-sm text-primary" />
@@ -208,7 +208,7 @@ const Footer = () => {
                   >
                     <ArrowRight className="me-2.5 text-sm text-primary" />
                     <Box component="span" className="font-light">
-                      Contact Us
+                      Contact
                     </Box>
                   </NavLink>
                 </ListItem>

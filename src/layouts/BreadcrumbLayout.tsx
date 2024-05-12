@@ -52,7 +52,9 @@ const BreadcrumbLayout = () => {
                   className="text-sm font-medium capitalize leading-[1.7] text-[white]"
                   key={to}
                 >
-                  {pathname.replace(/-/g, " ")}
+                  {pathname.replace(/(-|and)/g, function (match) {
+                    return match === "-" ? " " : "&";
+                  })}
                 </Typography>
               ) : (
                 <LinkRouter
@@ -60,7 +62,9 @@ const BreadcrumbLayout = () => {
                   to={to}
                   key={to}
                 >
-                  {pathname.replace(/-/g, " ")}
+                  {pathname.replace(/(-|and)/g, function (match) {
+                    return match === "-" ? " " : "&";
+                  })}
                 </LinkRouter>
               );
             })}
@@ -69,7 +73,12 @@ const BreadcrumbLayout = () => {
             variant="h1"
             className="text-center text-3xl font-bold capitalize leading-tight tracking-[-0.2px] text-[white]"
           >
-            {pathnames[pathnames.length - 1].replace(/-/g, " ")}
+            {pathnames[pathnames.length - 1].replace(
+              /(-|and)/g,
+              function (match) {
+                return match === "-" ? " " : "&";
+              },
+            )}
           </Typography>
         </Container>
       </Box>

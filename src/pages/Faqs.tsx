@@ -136,10 +136,10 @@ const Faqs = () => {
             key={index}
             expanded={expanded === index}
             onChange={handleChange(index)}
-            className="text-sm font-bold"
+            className="text-sm"
           >
             <AccordionSummary
-              className={`leading-[1.45] tracking-[-0.01rem] text-[#1B1E23] hover:bg-[#E9EAEB] ${
+              className={`font-bold leading-[1.45] tracking-[-0.01rem] text-[#1B1E23] hover:bg-[#E9EAEB] ${
                 expanded === index ? "bg-[#e9eaeb]" : ""
               }`}
               expandIcon={<ExpandMore />}

@@ -1,5 +1,11 @@
+import { Box, Container } from "@mui/material";
+
 const Category = () => {
-  return <div>Category</div>;
+  return (
+    <Box component="section" className="py-10">
+      <Container></Container>
+    </Box>
+  );
 };
 
 export default Category;
