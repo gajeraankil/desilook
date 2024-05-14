@@ -15,11 +15,11 @@ const About = () => {
           stores. Desilook Lifestyle brings you the world's finest collection
           and wide range of Indian
           <Box component="span" className="mx-1 text-primary">
-            SAREES, SALWAAR KAMEEZ,
+            Sarees, Salwar Kameez,
           </Box>
           and
           <Box component="span" className="ms-1 text-primary">
-            LEHENGA CHOLI
+            Lehenga Choli
           </Box>
           .
         </Typography>

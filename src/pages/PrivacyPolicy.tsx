@@ -269,7 +269,7 @@ const PrivacyPolicy = () => {
             <ListItem className="p-0">
               <Box className="flex items-start">
                 <Circle className="me-2.5 mt-2.5 text-[4px]" />
-                <Typography className="text-justify">
+                <Typography className="text-justify text-sm">
                   Send an e-mail with your request and current contact
                   information to
                   <Link

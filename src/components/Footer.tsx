@@ -34,7 +34,7 @@ const Footer = () => {
                   component="span"
                   className="absolute -bottom-1 left-0 h-px w-10 bg-[#737576]"
                 ></Box>
-                CONTACT US
+                Contact Us
                 <Box
                   component="span"
                   className="absolute -bottom-1 left-0 h-0.5 w-3 rounded-[10px] bg-[white]"
@@ -44,9 +44,9 @@ const Footer = () => {
                 <ListItem className="px-0 pb-1.5 pt-0">
                   <NavLink
                     to="#"
-                    className="flex items-center text-[white] no-underline transition-all duration-[0.2s] ease-[ease-in-out] hover:opacity-[0.8]"
+                    className="flex items-start text-[white] no-underline transition-all duration-[0.2s] ease-[ease-in-out] hover:opacity-[0.8]"
                   >
-                    <LocationOn className="me-2.5 text-sm" />
+                    <LocationOn className="me-2.5 mt-[5px] text-sm" />
                     <Box component="span" className="font-light">
                       1053-54 Avadh Textile Market Opp. New Bombay Market surat
                       - 395010
@@ -137,12 +137,12 @@ const Footer = () => {
               <List className="p-0 text-sm leading-[1.7]">
                 <ListItem className="px-0 pb-1.5 pt-0">
                   <NavLink
-                    to="/about"
+                    to="/about-us"
                     className="flex items-center text-[white] no-underline transition-all duration-[0.2s] ease-[ease-in-out] hover:opacity-[0.8]"
                   >
                     <ArrowRight className="me-2.5 text-sm text-primary" />
                     <Box component="span" className="font-light">
-                      About
+                      About Us
                     </Box>
                   </NavLink>
                 </ListItem>
@@ -203,12 +203,12 @@ const Footer = () => {
                 </ListItem>
                 <ListItem className="px-0 pb-1.5 pt-0">
                   <NavLink
-                    to="/contact"
+                    to="/contact-us"
                     className="flex items-center text-[white] no-underline transition-all duration-[0.2s] ease-[ease-in-out] hover:opacity-[0.8]"
                   >
                     <ArrowRight className="me-2.5 text-sm text-primary" />
                     <Box component="span" className="font-light">
-                      Contact
+                      Contact Us
                     </Box>
                   </NavLink>
                 </ListItem>

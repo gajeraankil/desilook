@@ -29,7 +29,7 @@ const App = () => {
           element: <BreadcrumbLayout />,
           children: [
             {
-              path: "about",
+              path: "about-us",
               element: <About />,
             },
             {
@@ -37,7 +37,7 @@ const App = () => {
               element: <Category />,
             },
             {
-              path: "contact",
+              path: "contact-us",
               element: <Contact />,
             },
             {
