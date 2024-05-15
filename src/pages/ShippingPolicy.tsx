@@ -284,7 +284,7 @@ const ShippingPolicy = () => {
           from the credit card company. The shipping address is the address
           where the customer wants to receive their shipment.
         </Box>
-        <Box className="mb-5 text-sm font-medium leading-[1.7] text-[#60697B]">
+        <Box className="text-sm font-medium leading-[1.7] text-[#60697B]">
           <Typography className="font-bold leading-[1.45] tracking-[-0.01rem] text-[#1B1E23]">
             What happens if my order is lost in transit?
           </Typography>

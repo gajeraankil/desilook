@@ -125,7 +125,7 @@ const ReturnRefundPolicy = () => {
           variations that may occur with respect to the actual color of the
           outfit received.
         </Box>
-        <Box className="mb-5 text-sm font-medium leading-[1.7] text-[#60697B]">
+        <Box className="text-sm font-medium leading-[1.7] text-[#60697B]">
           <Typography className="font-bold leading-[1.45] tracking-[-0.01rem] text-[#1B1E23]">
             Embellishment-related issues
           </Typography>

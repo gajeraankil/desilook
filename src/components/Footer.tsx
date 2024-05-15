@@ -43,8 +43,9 @@ const Footer = () => {
               <List className="p-0 text-sm leading-[1.7]">
                 <ListItem className="px-0 pb-1.5 pt-0">
                   <NavLink
-                    to="#"
                     className="flex items-start text-[white] no-underline transition-all duration-[0.2s] ease-[ease-in-out] hover:opacity-[0.8]"
+                    to="https://maps.app.goo.gl/seRx9ECydtFZej13A"
+                    target="_blank"
                   >
                     <LocationOn className="me-2.5 mt-[5px] text-sm" />
                     <Box component="span" className="font-light">

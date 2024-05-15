@@ -6,6 +6,7 @@ const RootLayout = lazy(() => import("./layouts/RootLayout"));
 const BreadcrumbLayout = lazy(() => import("./layouts/BreadcrumbLayout"));
 const Home = lazy(() => import("./pages/Home"));
 const About = lazy(() => import("./pages/About"));
+const Cart = lazy(() => import("./pages/Cart"));
 const Category = lazy(() => import("./pages/Category"));
 const Contact = lazy(() => import("./pages/Contact"));
 const Faqs = lazy(() => import("./pages/Faqs"));
@@ -31,6 +32,10 @@ const App = () => {
             {
               path: "about-us",
               element: <About />,
+            },
+            {
+              path: "cart",
+              element: <Cart />,
             },
             {
               path: "category/:category",

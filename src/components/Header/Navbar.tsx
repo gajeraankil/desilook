@@ -16,10 +16,12 @@ import {
   ListItemButton,
 } from "@mui/material";
 import { useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import logo from "../../assets/logo.png";
 
 const Navbar = () => {
+  const navigate = useNavigate();
+
   const [open, setOpen] = useState(false);
 
   const categories = [
@@ -106,7 +108,7 @@ const Navbar = () => {
                 <FavoriteBorderOutlined />
               </Badge>
             </IconButton>
-            <IconButton>
+            <IconButton onClick={() => navigate("/cart")}>
               <Badge
                 variant="dot"
                 sx={{
