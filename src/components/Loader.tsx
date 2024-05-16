@@ -1,10 +1,10 @@
-import { Backdrop, CircularProgress } from "@mui/material";
+import { Box, CircularProgress } from "@mui/material";
 
 const Loader = () => {
   return (
-    <Backdrop open className="bg-[white]">
+    <Box className="py-10 text-center">
       <CircularProgress />
-    </Backdrop>
+    </Box>
   );
 };
 

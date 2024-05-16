@@ -1,6 +1,5 @@
-import { Suspense, lazy } from "react";
+import { lazy } from "react";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import Loader from "./components/Loader";
 
 const RootLayout = lazy(() => import("./layouts/RootLayout"));
 const BreadcrumbLayout = lazy(() => import("./layouts/BreadcrumbLayout"));
@@ -14,6 +13,7 @@ const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
 const ReturnRefundPolicy = lazy(() => import("./pages/ReturnRefundPolicy"));
 const ShippingPolicy = lazy(() => import("./pages/ShippingPolicy"));
 const TermsConditions = lazy(() => import("./pages/TermsConditions"));
+const WishList = lazy(() => import("./pages/WishList"));
 
 const App = () => {
   const router = createBrowserRouter([
@@ -65,17 +65,17 @@ const App = () => {
               path: "terms-and-conditions",
               element: <TermsConditions />,
             },
+            {
+              path: "wishlist",
+              element: <WishList />,
+            },
           ],
         },
       ],
     },
   ]);
 
-  return (
-    <Suspense fallback={<Loader />}>
-      <RouterProvider router={router} />
-    </Suspense>
-  );
+  return <RouterProvider router={router} />;
 };
 
 export default App;

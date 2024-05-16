@@ -96,7 +96,7 @@ const Navbar = () => {
             <IconButton className="me-3">
               <PersonOutline />
             </IconButton>
-            <IconButton className="me-3">
+            <IconButton className="me-3" onClick={() => navigate("/wishlist")}>
               <Badge
                 variant="dot"
                 sx={{

@@ -6,7 +6,9 @@ import {
   LinkProps,
   Typography,
 } from "@mui/material";
+import { Suspense } from "react";
 import { Outlet, Link as RouterLink, useLocation } from "react-router-dom";
+import Loader from "../components/Loader";
 
 interface LinkRouterProps extends LinkProps {
   to: string;
@@ -82,7 +84,9 @@ const BreadcrumbLayout = () => {
           </Typography>
         </Container>
       </Box>
-      <Outlet />
+      <Suspense fallback={<Loader />}>
+        <Outlet />
+      </Suspense>
     </>
   );
 };
