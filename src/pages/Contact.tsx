@@ -1,15 +1,43 @@
+import { zodResolver } from "@hookform/resolvers/zod";
 import {
   Box,
   Button,
   Container,
   Grid,
   TextField,
-  TextareaAutosize,
   Typography,
 } from "@mui/material";
+import { useForm } from "react-hook-form";
+import { z } from "zod";
 
 const Contact = () => {
-  const handleSubmit = () => {};
+  const formSchema = z.object({
+    name: z.string().min(1, "Name is required"),
+    email: z.string().min(1, "Email is required").email("Enter valid Email"),
+    phone: z
+      .string()
+      .min(1, "Phone number is required")
+      .regex(/^[0-9]\d*$/, { message: "Enter valid Phone number" }),
+    message: z.string(),
+  });
+
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<z.infer<typeof formSchema>>({
+    resolver: zodResolver(formSchema),
+    defaultValues: {
+      name: "",
+      email: "",
+      phone: "",
+      message: "",
+    },
+  });
+
+  const onSubmit = (values: z.infer<typeof formSchema>) => {
+    console.log(values);
+  };
 
   return (
     <Box component="section" className="bg-[#FEFEFE] py-10">
@@ -23,25 +51,36 @@ const Contact = () => {
               >
                 Get in touch with us
               </Typography>
-              <form onSubmit={handleSubmit}>
+              <form onSubmit={handleSubmit(onSubmit)}>
                 <TextField
                   className="mb-[30px] w-full"
                   label="Name"
-                  variant="outlined"
+                  {...register("name")}
+                  error={!!errors?.name}
+                  helperText={errors?.name?.message}
                 />
                 <TextField
                   className="mb-[30px] w-full"
                   label="Email"
-                  variant="outlined"
+                  {...register("email")}
+                  error={!!errors?.email}
+                  helperText={errors?.email?.message}
                 />
                 <TextField
                   className="mb-[30px] w-full"
                   label="Phone Number"
-                  variant="outlined"
+                  {...register("phone")}
+                  error={!!errors?.phone}
+                  helperText={errors?.phone?.message}
                 />
-                <TextareaAutosize
-                  className="mb-[30px] !h-28 w-full resize-none px-3.5 py-4"
-                  placeholder="Message"
+                <TextField
+                  className="mb-[30px] w-full"
+                  label="Message"
+                  multiline
+                  rows={4}
+                  {...register("message")}
+                  error={!!errors?.message}
+                  helperText={errors?.message?.message}
                 />
                 <Button
                   type="submit"

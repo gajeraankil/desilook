@@ -221,7 +221,7 @@ const Footer = () => {
       </Box>
       <Box className="bg-[#262B32] py-5">
         <Container>
-          <Typography className="text-sm font-medium leading-[1.7]">
+          <Typography className="text-center text-sm font-medium leading-[1.7]">
             © Copyright {new Date().getFullYear()}. Desilook Lifestyle. All
             Rights Reserved.
           </Typography>

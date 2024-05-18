@@ -3,7 +3,11 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
 const RootLayout = lazy(() => import("./layouts/RootLayout"));
 const BreadcrumbLayout = lazy(() => import("./layouts/BreadcrumbLayout"));
+const AuthLayout = lazy(() => import("./layouts/AuthLayout"));
 const Home = lazy(() => import("./pages/Home"));
+const Login = lazy(() => import("./pages/Login"));
+const Register = lazy(() => import("./pages/Register"));
+const ResetPassword = lazy(() => import("./pages/ResetPassword"));
 const About = lazy(() => import("./pages/About"));
 const Cart = lazy(() => import("./pages/Cart"));
 const Category = lazy(() => import("./pages/Category"));
@@ -29,6 +33,24 @@ const App = () => {
           path: "",
           element: <BreadcrumbLayout />,
           children: [
+            {
+              path: "",
+              element: <AuthLayout />,
+              children: [
+                {
+                  path: "login",
+                  element: <Login />,
+                },
+                {
+                  path: "register",
+                  element: <Register />,
+                },
+                {
+                  path: "reset-password",
+                  element: <ResetPassword />,
+                },
+              ],
+            },
             {
               path: "about-us",
               element: <About />,

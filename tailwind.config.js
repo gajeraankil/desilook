@@ -12,6 +12,9 @@ export default {
     colors: {
       primary: "#F97316",
     },
+    fontFamily: {
+      sans: ["Manrope"],
+    },
     extend: {},
   },
   corePlugins: {

@@ -1,13 +1,13 @@
 import {
   FavoriteBorderOutlined,
   Menu,
-  PersonOutline,
   ShoppingCartOutlined,
 } from "@mui/icons-material";
 import {
   AppBar,
   Badge,
   Box,
+  Button,
   Container,
   Drawer,
   IconButton,
@@ -93,9 +93,12 @@ const Navbar = () => {
           </Box>
           <List className="hidden flex-wrap md:flex">{DrawerList}</List>
           <Box>
-            <IconButton className="me-3">
-              <PersonOutline />
-            </IconButton>
+            <Button
+              className="normal-case text-[black]"
+              onClick={() => navigate("/login")}
+            >
+              Login
+            </Button>
             <IconButton className="me-3" onClick={() => navigate("/wishlist")}>
               <Badge
                 variant="dot"
