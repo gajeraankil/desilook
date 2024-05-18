@@ -33,18 +33,19 @@ const ResetPassword = () => {
           {...register("email")}
           error={!!errors?.email}
           helperText={errors?.email?.message}
+          InputProps={{ sx: { borderRadius: "8px" } }}
         />
         <Button
           type="submit"
           variant="contained"
-          className="w-full py-3.5 normal-case text-[white]"
+          className="w-full rounded-lg py-3.5 text-base font-medium normal-case leading-[1.7] tracking-[-0.2px] text-[white]"
         >
           Reset
         </Button>
       </form>
       <Box className="text-sm text-[#60697B]">
         Don't have an account?
-        <Link className="ms-1 text-primary" to="/register">
+        <Link className="ms-1 font-medium text-primary" to="/register">
           Register
         </Link>
       </Box>

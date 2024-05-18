@@ -53,39 +53,43 @@ const Contact = () => {
               </Typography>
               <form onSubmit={handleSubmit(onSubmit)}>
                 <TextField
-                  className="mb-[30px] w-full"
+                  className="mb-[30px] w-full rounded-lg"
                   label="Name"
                   {...register("name")}
                   error={!!errors?.name}
                   helperText={errors?.name?.message}
+                  InputProps={{ sx: { borderRadius: "8px" } }}
                 />
                 <TextField
-                  className="mb-[30px] w-full"
+                  className="mb-[30px] w-full rounded-lg"
                   label="Email"
                   {...register("email")}
                   error={!!errors?.email}
                   helperText={errors?.email?.message}
+                  InputProps={{ sx: { borderRadius: "8px" } }}
                 />
                 <TextField
-                  className="mb-[30px] w-full"
+                  className="mb-[30px] w-full rounded-lg"
                   label="Phone Number"
                   {...register("phone")}
                   error={!!errors?.phone}
                   helperText={errors?.phone?.message}
+                  InputProps={{ sx: { borderRadius: "8px" } }}
                 />
                 <TextField
-                  className="mb-[30px] w-full"
+                  className="mb-[30px] w-full rounded-lg"
                   label="Message"
                   multiline
                   rows={4}
                   {...register("message")}
                   error={!!errors?.message}
                   helperText={errors?.message?.message}
+                  InputProps={{ sx: { borderRadius: "8px" } }}
                 />
                 <Button
                   type="submit"
                   variant="contained"
-                  className="w-full py-3.5 text-[white]"
+                  className="w-full rounded-lg py-3.5 text-base font-medium normal-case leading-[1.7] tracking-[-0.2px] text-[white]"
                 >
                   Submit
                 </Button>

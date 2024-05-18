@@ -38,6 +38,7 @@ const Login = () => {
           {...register("email")}
           error={!!errors?.email}
           helperText={errors?.email?.message}
+          InputProps={{ sx: { borderRadius: "8px" } }}
         />
         <Box className="mb-[30px]">
           <TextField
@@ -47,9 +48,10 @@ const Login = () => {
             {...register("password")}
             error={!!errors?.password}
             helperText={errors?.password?.message}
+            InputProps={{ sx: { borderRadius: "8px" } }}
           />
           <Box className="text-right text-sm">
-            <Link className="text-primary" to="/reset-password">
+            <Link className="font-medium text-primary" to="/reset-password">
               Forgot password?
             </Link>
           </Box>
@@ -57,14 +59,14 @@ const Login = () => {
         <Button
           type="submit"
           variant="contained"
-          className="w-full py-3.5 normal-case text-[white]"
+          className="w-full rounded-lg py-3.5 text-base font-medium normal-case leading-[1.7] tracking-[-0.2px] text-[white]"
         >
           Login
         </Button>
       </form>
       <Box className="text-sm text-[#60697B]">
         Don't have an account?
-        <Link className="ms-1 text-primary" to="/register">
+        <Link className="ms-1 font-medium text-primary" to="/register">
           Register
         </Link>
       </Box>

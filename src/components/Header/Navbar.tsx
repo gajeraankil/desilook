@@ -53,16 +53,14 @@ const Navbar = () => {
         letterSpacing: -0.5,
       }}
     >
-      <ListItemButton sx={{ padding: 0 }} tabIndex={-1}>
+      <ListItemButton sx={{ padding: 0, borderRadius: "4px" }} tabIndex={-1}>
         <NavLink
-          style={({ isActive }) => {
-            return {
-              color: isActive ? "#F97316" : "black",
-              textDecoration: "none",
-              padding: "8px 16px",
-              width: "100%",
-            };
-          }}
+          style={({ isActive }) => ({
+            color: isActive ? "#F97316" : "black",
+            textDecoration: "none",
+            padding: "8px 16px",
+            width: "100%",
+          })}
           to={`/category/${category.toLowerCase().replace(/ /g, "-")}`}
         >
           {category}
