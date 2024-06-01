@@ -13,12 +13,16 @@ const Register = () => {
   const navigate = useNavigate();
 
   const { loading } = useAppSelector((state: RootState) => state.auth);
-  console.log("loading", loading);
 
   const formSchema = z
     .object({
       first_name: z.string().min(1, "First Name is required").trim(),
       last_name: z.string().min(1, "Last Name is required").trim(),
+      phone: z
+        .string()
+        .min(1, "Phone number is required")
+        .regex(/^[0-9]\d*$/, { message: "Enter valid Phone number" })
+        .trim(),
       email: z
         .string()
         .min(1, "Email is required")
@@ -44,6 +48,7 @@ const Register = () => {
     defaultValues: {
       first_name: "",
       last_name: "",
+      phone: "",
       email: "",
       password: "",
       confirm_password: "",
@@ -51,11 +56,11 @@ const Register = () => {
   });
 
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
-    const { first_name, last_name, email, password } = values;
+    const { first_name, last_name, phone, email, password } = values;
 
     try {
       const response = await dispatch(
-        registerUser({ first_name, last_name, email, password }),
+        registerUser({ first_name, last_name, phone, email, password }),
       ).unwrap();
 
       if (response) {
@@ -84,6 +89,14 @@ const Register = () => {
           {...register("last_name")}
           error={!!errors?.last_name}
           helperText={errors?.last_name?.message}
+          InputProps={{ sx: { borderRadius: "8px" } }}
+        />
+        <TextField
+          className="mb-[30px] w-full rounded-lg"
+          label="Phone Number"
+          {...register("phone")}
+          error={!!errors?.phone}
+          helperText={errors?.phone?.message}
           InputProps={{ sx: { borderRadius: "8px" } }}
         />
         <TextField

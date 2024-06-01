@@ -22,7 +22,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
         <ThemeProvider theme={theme}>
           <CssBaseline />
           <App />
-          <ToastContainer />
+          <ToastContainer autoClose={3000} />
         </ThemeProvider>
       </PersistGate>
     </Provider>

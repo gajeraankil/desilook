@@ -8,9 +8,18 @@ import {
   Typography,
 } from "@mui/material";
 import { useForm } from "react-hook-form";
+import { toast } from "react-toastify";
 import { z } from "zod";
+import { useAppDispatch, useAppSelector } from "../store/hooks";
+import { contactForm } from "../store/slices/contactSlice";
+import { RootState } from "../store/store";
 
 const Contact = () => {
+  const dispatch = useAppDispatch();
+
+  const { data } = useAppSelector((state: RootState) => state.auth);
+  const { loading } = useAppSelector((state: RootState) => state.contact);
+
   const formSchema = z.object({
     name: z.string().min(1, "Name is required").trim(),
     email: z
@@ -30,18 +39,28 @@ const Contact = () => {
     register,
     handleSubmit,
     formState: { errors },
+    reset,
   } = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      name: "",
-      email: "",
-      phone: "",
+      name: (data?.first_name || "") + " " + (data?.last_name || ""),
+      email: data?.email || "",
+      phone: data?.phone || "",
       message: "",
     },
   });
 
-  const onSubmit = (values: z.infer<typeof formSchema>) => {
-    console.log(values);
+  const onSubmit = async (values: z.infer<typeof formSchema>) => {
+    try {
+      const response = await dispatch(contactForm(values)).unwrap();
+
+      if (response) {
+        toast.success(response?.message);
+        reset();
+      }
+    } catch (error: any) {
+      toast.error(error?.message);
+    }
   };
 
   return (
@@ -64,6 +83,7 @@ const Contact = () => {
                   error={!!errors?.name}
                   helperText={errors?.name?.message}
                   InputProps={{ sx: { borderRadius: "8px" } }}
+                  disabled={!!data?.first_name || !!data?.last_name}
                 />
                 <TextField
                   className="mb-[30px] w-full rounded-lg"
@@ -72,6 +92,7 @@ const Contact = () => {
                   error={!!errors?.email}
                   helperText={errors?.email?.message}
                   InputProps={{ sx: { borderRadius: "8px" } }}
+                  disabled={!!data?.email}
                 />
                 <TextField
                   className="mb-[30px] w-full rounded-lg"
@@ -80,6 +101,7 @@ const Contact = () => {
                   error={!!errors?.phone}
                   helperText={errors?.phone?.message}
                   InputProps={{ sx: { borderRadius: "8px" } }}
+                  disabled={!!data?.phone}
                 />
                 <TextField
                   className="mb-[30px] w-full rounded-lg"
@@ -95,6 +117,7 @@ const Contact = () => {
                   type="submit"
                   variant="contained"
                   className="w-full rounded-lg py-3.5 text-base font-medium normal-case leading-[1.7] tracking-[-0.2px] text-[white]"
+                  disabled={loading}
                 >
                   Submit
                 </Button>

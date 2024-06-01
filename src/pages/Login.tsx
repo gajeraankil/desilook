@@ -4,12 +4,15 @@ import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { z } from "zod";
-import { useAppDispatch } from "../store/hooks";
+import { useAppDispatch, useAppSelector } from "../store/hooks";
 import { loginUser } from "../store/slices/authSlice";
+import { RootState } from "../store/store";
 
 const Login = () => {
   const dispatch = useAppDispatch();
   const navigate = useNavigate();
+
+  const { loading } = useAppSelector((state: RootState) => state.auth);
 
   const formSchema = z.object({
     email: z
@@ -36,10 +39,8 @@ const Login = () => {
   });
 
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
-    const { email, password } = values;
-
     try {
-      const response = await dispatch(loginUser({ email, password })).unwrap();
+      const response = await dispatch(loginUser(values)).unwrap();
 
       if (response) {
         toast.success(response?.message);
@@ -81,6 +82,7 @@ const Login = () => {
           type="submit"
           variant="contained"
           className="w-full rounded-lg py-3.5 text-base font-medium normal-case leading-[1.7] tracking-[-0.2px] text-[white]"
+          disabled={loading}
         >
           Login
         </Button>

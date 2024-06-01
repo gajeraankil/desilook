@@ -17,10 +17,17 @@ import {
 } from "@mui/material";
 import { useState } from "react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 import logo from "../../assets/logo.png";
+import { useAppDispatch, useAppSelector } from "../../store/hooks";
+import { logoutUser } from "../../store/slices/authSlice";
+import { RootState } from "../../store/store";
 
 const Navbar = () => {
+  const dispatch = useAppDispatch();
   const navigate = useNavigate();
+
+  const { data } = useAppSelector((state: RootState) => state.auth);
 
   const [open, setOpen] = useState(false);
 
@@ -91,12 +98,24 @@ const Navbar = () => {
           </Box>
           <List className="hidden flex-wrap md:flex">{DrawerList}</List>
           <Box>
-            <Button
-              className="normal-case text-[black]"
-              onClick={() => navigate("/login")}
-            >
-              Login
-            </Button>
+            {!data?.token ? (
+              <Button
+                className="normal-case text-[black]"
+                onClick={() => navigate("/login")}
+              >
+                Login
+              </Button>
+            ) : (
+              <Button
+                className="normal-case text-[black]"
+                onClick={() => {
+                  dispatch(logoutUser());
+                  toast.success("Logged out successfully");
+                }}
+              >
+                Logout
+              </Button>
+            )}
             <IconButton className="me-3" onClick={() => navigate("/wishlist")}>
               <Badge
                 variant="dot"

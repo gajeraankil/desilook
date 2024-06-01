@@ -4,6 +4,7 @@ import axios, { AxiosError } from "axios";
 interface RegisterUserData {
   first_name: string;
   last_name: string;
+  phone: string;
   email: string;
   password: string;
 }
@@ -66,7 +67,11 @@ export const loginUser = createAsyncThunk(
 export const authSlice = createSlice({
   name: "auth",
   initialState,
-  reducers: {},
+  reducers: {
+    logoutUser: (state) => {
+      state.data = null;
+    },
+  },
   extraReducers: (builder) => {
     builder.addCase(registerUser.pending, (state) => {
       state.loading = true;
@@ -91,5 +96,7 @@ export const authSlice = createSlice({
     });
   },
 });
+
+export const { logoutUser } = authSlice.actions;
 
 export default authSlice.reducer;
