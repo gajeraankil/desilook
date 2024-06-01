@@ -1,15 +1,29 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Box, Button, TextField } from "@mui/material";
 import { useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 import { z } from "zod";
+import { useAppDispatch, useAppSelector } from "../store/hooks";
+import { registerUser } from "../store/slices/authSlice";
+import { RootState } from "../store/store";
 
 const Register = () => {
+  const dispatch = useAppDispatch();
+  const navigate = useNavigate();
+
+  const { loading } = useAppSelector((state: RootState) => state.auth);
+  console.log("loading", loading);
+
   const formSchema = z
     .object({
-      first_name: z.string().min(1, "First Name is required"),
-      last_name: z.string().min(1, "Last Name is required"),
-      email: z.string().min(1, "Email is required").email("Enter valid Email"),
+      first_name: z.string().min(1, "First Name is required").trim(),
+      last_name: z.string().min(1, "Last Name is required").trim(),
+      email: z
+        .string()
+        .min(1, "Email is required")
+        .email("Enter valid Email")
+        .trim(),
       password: z
         .string()
         .min(1, "Password is required")
@@ -36,8 +50,21 @@ const Register = () => {
     },
   });
 
-  const onSubmit = (values: z.infer<typeof formSchema>) => {
-    console.log(values);
+  const onSubmit = async (values: z.infer<typeof formSchema>) => {
+    const { first_name, last_name, email, password } = values;
+
+    try {
+      const response = await dispatch(
+        registerUser({ first_name, last_name, email, password }),
+      ).unwrap();
+
+      if (response) {
+        toast.success(response?.message);
+        navigate("/");
+      }
+    } catch (error: any) {
+      toast.error(error?.message);
+    }
   };
 
   return (
@@ -89,6 +116,7 @@ const Register = () => {
           type="submit"
           variant="contained"
           className="w-full rounded-lg py-3.5 text-base font-medium normal-case leading-[1.7] tracking-[-0.2px] text-[white]"
+          disabled={loading}
         >
           Create Account
         </Button>

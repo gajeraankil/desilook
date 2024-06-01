@@ -1,12 +1,22 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Box, Button, TextField } from "@mui/material";
 import { useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 import { z } from "zod";
+import { useAppDispatch } from "../store/hooks";
+import { loginUser } from "../store/slices/authSlice";
 
 const Login = () => {
+  const dispatch = useAppDispatch();
+  const navigate = useNavigate();
+
   const formSchema = z.object({
-    email: z.string().min(1, "Email is required").email("Enter valid Email"),
+    email: z
+      .string()
+      .min(1, "Email is required")
+      .email("Enter valid Email")
+      .trim(),
     password: z
       .string()
       .min(1, "Password is required")
@@ -25,8 +35,19 @@ const Login = () => {
     },
   });
 
-  const onSubmit = (values: z.infer<typeof formSchema>) => {
-    console.log(values);
+  const onSubmit = async (values: z.infer<typeof formSchema>) => {
+    const { email, password } = values;
+
+    try {
+      const response = await dispatch(loginUser({ email, password })).unwrap();
+
+      if (response) {
+        toast.success(response?.message);
+        navigate("/");
+      }
+    } catch (error: any) {
+      toast.error(error?.message);
+    }
   };
 
   return (

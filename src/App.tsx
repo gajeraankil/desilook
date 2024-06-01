@@ -1,5 +1,6 @@
-import { lazy } from "react";
+import { Suspense, lazy } from "react";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import Loader from "./components/Loader";
 
 const RootLayout = lazy(() => import("./layouts/RootLayout"));
 const BreadcrumbLayout = lazy(() => import("./layouts/BreadcrumbLayout"));
@@ -97,7 +98,11 @@ const App = () => {
     },
   ]);
 
-  return <RouterProvider router={router} />;
+  return (
+    <Suspense fallback={<Loader />}>
+      <RouterProvider router={router} />
+    </Suspense>
+  );
 };
 
 export default App;

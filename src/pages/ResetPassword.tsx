@@ -6,7 +6,11 @@ import { z } from "zod";
 
 const ResetPassword = () => {
   const formSchema = z.object({
-    email: z.string().min(1, "Email is required").email("Enter valid Email"),
+    email: z
+      .string()
+      .min(1, "Email is required")
+      .email("Enter valid Email")
+      .trim(),
   });
 
   const {
